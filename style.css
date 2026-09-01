@@ -14,9 +14,6 @@ body {
     color: #172033;
     line-height: 1.6;
 }
-html {
-    scroll-behavior: smooth;
-}
 .navbar {
     width: 100%;
     padding: 20px 8%;
@@ -28,7 +25,8 @@ html {
     position: sticky;
     top: 0;
     z-index: 1000;
-    .menu-toggle {
+}
+.menu-toggle {
     display: none;
 
     border: none;
@@ -39,7 +37,6 @@ html {
     color: #172033;
 
     cursor: pointer;
-}
 }
 
 .logo {
@@ -287,6 +284,7 @@ section {
     display: flex;
     gap: 24px;
     align-items: flex-start;
+    min-width: 0;
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease;
 }
@@ -326,7 +324,7 @@ section {
 /* Certificate content */
 
 .certificate-content {
-    flex: 1;
+    min-width: 0;
 }
 
 .certificate-type {
@@ -456,40 +454,6 @@ section {
         grid-template-columns: 1fr;
     }
 
-}@media (max-width: 900px) {
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 60px;
-    }
-
-    .hero-text {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .skills-container,
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 900px) {
-
-    .certifications-container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
 @media (max-width: 600px) {
 
     .navbar {
@@ -505,7 +469,7 @@ section {
 
         position: absolute;
 
-        top: 70px;
+        top: 100%;
         left: 5%;
         right: 5%;
 

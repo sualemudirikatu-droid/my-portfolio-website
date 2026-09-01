@@ -9,9 +9,7 @@ menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
 
 });
-menuToggle.addEventListener("click", function () {
 
-});
 navLinks.classList.toggle("active");
 const navigationLinks = document.querySelectorAll(".nav-links a");
 
