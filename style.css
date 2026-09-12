@@ -267,7 +267,7 @@ section {
 ======================================== */
 
 .certifications-section {
-    background-color: #FFFFFF;
+    background: color #171f32;;
 }
 
 .certifications-container {
@@ -277,8 +277,8 @@ section {
 }
 
 .certificate-card {
-    background-color: #F8FAFC;
-    border: 1px solid #E2E8F0;
+    background-color: #171f32;
+    border: 1px solid #171f32;
     border-radius: 10px;
     padding: 30px;
     display: flex;
@@ -307,7 +307,7 @@ section {
     align-items: center;
     justify-content: center;
 
-    background-color: #E8F0FE;
+    background-color: #171f32;
     color: #2563EB;
 
     border-radius: 8px;
@@ -317,7 +317,7 @@ section {
 }
 
 .certificate-icon.suale mudirikatu-icon {
-    background-color: #EEF2FF;
+    background-color: #171F32;
 }
 
 
@@ -390,6 +390,52 @@ section {
 .certificate-link:hover {
     text-decoration: underline;
 }
+/* ========================================
+   LEADERSHIP
+======================================== */
+
+.leadership-section {
+    background-color: #F8FAFC;
+}
+
+.leadership-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.leadership-group h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #172033;
+}
+
+.leadership-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.leadership-card h4 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #172033;
+}
+
+.leadership-card p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.7;
+}
 .contact-section {
     background-color: #172033;
     color: #FFFFFF;
@@ -453,6 +499,10 @@ section {
     .certifications-container {
         grid-template-columns: 1fr;
     }
+    .leadership-container {
+    grid-template-columns: 1fr;
+}
+}
 
 @media (max-width: 600px) {
 
@@ -551,4 +601,56 @@ section {
         font-size: 32px;
     }
 
+}
+/* ========================================
+   SCROLL ANIMATIONS
+======================================== */
+
+section.hidden {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   HOVER ANIMATIONS
+======================================== */
+
+.btn,
+.project-link,
+.certificate-link,
+.nav-links a {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+}
+
+
+/* ========================================
+   HERO IMAGE ANIMATION
+======================================== */
+
+.hero-image img {
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
 }
